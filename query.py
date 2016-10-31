@@ -64,7 +64,8 @@ def get_brands_summary():
 
 # I realize that this is not optimal because the model is repeated multiple times. 
 # I was not able to 'group_by' model so we keep one unique model name.
-
+ # Another idea I had was to use 'join'. I tried but was not successful. My idea was:
+ # q1 = db.session.query(Brand.name, Model.name).outerjoin(Model).group_by(Model.name).order_by(Brand.name, Model.name)
 # -------------------------------------------------------------------
 # Part 2.5: Discussion Questions (Include your answers as comments.)
 
